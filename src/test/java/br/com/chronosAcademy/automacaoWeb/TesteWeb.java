@@ -4,6 +4,7 @@ import br.com.chronosAcademy.core.Driver;
 import br.com.chronosAcademy.pages.CursoPage;
 import br.com.chronosAcademy.pages.PrincipalPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.netty.channel.unix.DomainDatagramChannel;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -35,7 +36,6 @@ public class TesteWeb {
         assertEquals("Porque Tempo É Conhecimento", principalPage.getTitulo()); //compara o texto com o da página web
     }
 
-
     @Test
     public void segundoTeste(){
         cursoPage = new CursoPage(driver);
@@ -43,7 +43,6 @@ public class TesteWeb {
 
         assertEquals("Conheça todos os nossos cursos", cursoPage.getTitulo2());
     }
-
 
     @After
     public void finalizaTeste(){
